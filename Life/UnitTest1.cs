@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using cli_life;
+using System;
 
 namespace StringLibraryTest
 {
@@ -7,7 +8,7 @@ namespace StringLibraryTest
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void Test1()
         {
             LifeGame life = new LifeGame();
             var cells = life.Run("example.txt", "user_settings.json");
@@ -15,7 +16,7 @@ namespace StringLibraryTest
         }
 
         [TestMethod]
-        public void TestMethod2()
+        public void Test2()
         {
             LifeGame life = new LifeGame();
             var cells = life.Run("example3.txt", "user_settings.json");
@@ -23,7 +24,7 @@ namespace StringLibraryTest
         }
 
         [TestMethod]
-        public void TestMethod3()
+        public void Test3()
         {
             Board board = new Board(50, 20, 1, 0.5);
             board.GetCellsFromFile("box.txt");
@@ -31,7 +32,7 @@ namespace StringLibraryTest
         }
 
         [TestMethod]
-        public void TestMethod4()
+        public void Test4()
         {
             Board board = new Board(50, 20, 1, 0.5);
             board.GetCellsFromFile("block.txt");
@@ -39,7 +40,7 @@ namespace StringLibraryTest
         }
 
         [TestMethod]
-        public void TestMethod5()
+        public void Test5()
         {
             Board board = new Board(50, 20, 1, 0.5);
             board.GetCellsFromFile("hive.txt");
