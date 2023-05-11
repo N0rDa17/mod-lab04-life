@@ -252,8 +252,8 @@ namespace cli_life
                         }
                     }
                 }
-            File.Create("mod-lab04-life/user_stuff/res.txt").Close();
-            using (StreamWriter writer = new StreamWriter("mod-lab04-life/user_stuff/res.txt", true))
+            File.Create("mod-lab04-life/res.txt").Close();
+            using (StreamWriter writer = new StreamWriter("mod-lab04-life/res.txt", true))
             {
                 for (int i = 0; i < lines.Length; i++)
                 {
@@ -300,7 +300,7 @@ namespace cli_life
         static void Main(string[] args)
         {
             LifeGame life = new LifeGame();
-            var cells = life.Run("mod-lab04-life/user_stuff/example1.txt", "mod-lab04-life/user_stuff/user_settings.json");
+            var cells = life.Run("mod-lab04-life/example1.txt", "mod-lab04-life/user_settings.json");
 
             Console.Write("\n\tКоличество живых клеток: " + cells.aliveCells);
             Console.Write("\n\tКоличество мертвых клеток: " + (cells.allCells - cells.aliveCells));
